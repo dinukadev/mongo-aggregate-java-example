@@ -1,0 +1,8 @@
+server:
+  name: ms-consents
+  port: 80
+
+
+spring:
+  profiles:
+    active: dev
