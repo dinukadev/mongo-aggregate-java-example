@@ -1,5 +1,5 @@
 server:
-  name: ms-consents
+  name: ms-mongoaggregate-example
   port: 80
 
 

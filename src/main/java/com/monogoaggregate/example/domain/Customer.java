@@ -23,8 +23,16 @@ public class Customer implements Serializable {
         this.lastName = lastName;
     }
 
+    public void addFileInfo(String key, FileInfo fileInfo) {
+        fileInfoMap.put(key, fileInfo);
+    }
+
     public void setFileInfoMap(Map<String, FileInfo> fileInfoMap) {
         this.fileInfoMap = fileInfoMap;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public Map<String, FileInfo> getFileInfoMap() {
