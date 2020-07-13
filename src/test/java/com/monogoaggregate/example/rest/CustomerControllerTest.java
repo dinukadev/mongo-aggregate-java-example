@@ -2,6 +2,7 @@ package com.monogoaggregate.example.rest;
 
 import com.monogoaggregate.example.common.IntegrationTest;
 import com.monogoaggregate.example.constants.APIConstant;
+import com.monogoaggregate.example.domain.Customer;
 import com.monogoaggregate.example.dto.CustomerDto;
 import com.monogoaggregate.example.dto.FileInfoDto;
 import org.junit.Test;
@@ -32,5 +33,8 @@ public class CustomerControllerTest extends IntegrationTest {
 
         CustomerDto actual = mapper.readValue(response, CustomerDto.class);
         assertNotNull(actual);
+
+        Customer savedCustomer = mongoTemplate.findById(actual.getId(), Customer.class);
+        assertNotNull(savedCustomer);
     }
 }

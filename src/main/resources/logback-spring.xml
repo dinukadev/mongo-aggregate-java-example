@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <property scope="context" name="serviceName" value="mongo-aggregate-example"/>
-
     <springProfile name="dev">
         <property resource="logging-dev.properties"/>
 
@@ -28,7 +27,6 @@
         <logger name="org.springframework" level="DEBUG">
             <appender-ref ref="ROLLING"/>
         </logger>
-
         <root level="OFF">
         </root>
     </springProfile>
