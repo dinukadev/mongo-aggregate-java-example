@@ -42,7 +42,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .aggregate(
                         Arrays.asList(
                                 Aggregates.project(BsonDocument.parse("{ \"map\": { \"$objectToArray\": \"$fileInfoMap\" }, 'firstName': 1, 'lastName': 1}")),
-                                Aggregates.match(BsonDocument.parse(String.format("{'map.v.fileType': '%s' }",fileType))),
+                                Aggregates.match(BsonDocument.parse(String.format("{ 'map': { '$elemMatch': { 'v.fileType': '%s' } }  }",fileType))),
                                 Aggregates.project(BsonDocument.parse("{ \"fileInfoMap\": { \"$arrayToObject\": \"$map\" }, 'firstName': 1, 'lastName': 1 }"))
 
                         ));
