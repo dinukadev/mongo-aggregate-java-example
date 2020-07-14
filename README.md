@@ -18,7 +18,7 @@ This repository is used to demonstrate the mongo aggregation pipeline capability
 
 ```
 
-The accompanying blog post can be found [here]()
+The accompanying blog post can be found [here](https://dimashup.com/exploring-mongos-aggregate-pipelines/)
 
 # Pre-requisites
 - Java 8
